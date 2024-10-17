@@ -1,0 +1,29 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+.vscode/
+.idea/
+
+# Log files
+*.log
+
+# Coverage results
+coverage/
+
+# Database and sensitive information
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.json
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# DotNet specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+ 
