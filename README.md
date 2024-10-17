@@ -52,9 +52,9 @@ dotnet ef database update
 dotnet run
 ```
 
-### Access the API at http://localhost:5000/swagger to explore the endpoints via Swagger.
+### 4. Access the API at http://localhost:5000/swagger to explore the endpoints via Swagger.
 
-### 4. Running Tests (Optional)
+### 5. Running Tests (Optional)
 ```bash
 dotnet test
 ```
