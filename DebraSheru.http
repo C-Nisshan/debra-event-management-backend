@@ -1,0 +1,6 @@
+@DebraSheru_HostAddress = http://localhost:5286
+
+GET {{DebraSheru_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
