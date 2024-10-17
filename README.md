@@ -24,5 +24,5 @@ To run this project locally, ensure you have the following:
 
 ### 1. Clone the Repository:
 ```bash
-git clone <https://github.com/C-Nisshan/debra-event-management-backen.git>
+git clone https://github.com/C-Nisshan/debra-event-management-backen.git
 cd debra-backend
