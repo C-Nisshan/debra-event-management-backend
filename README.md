@@ -26,3 +26,37 @@ To run this project locally, ensure you have the following:
 ```bash
 git clone https://github.com/C-Nisshan/debra-event-management-backen.git
 cd debra-backend
+```
+
+### 2. Restore NuGet Packages:
+```bash
+dotnet restore
+```
+
+### 3. Configure the Database:
+#### 1. Update the appsettings.json file to set your SQL Server connection string:
+```bash
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=your_server;Database=your_db;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+}
+```
+#### 2. Apply database migrations:
+```bash
+dotnet ef database update
+```
+
+### 3. Run the Application:
+```bash
+dotnet run
+```
+
+### Access the API at http://localhost:5000/swagger to explore the endpoints via Swagger.
+
+### 4. Running Tests (Optional)
+```bash
+dotnet test
+```
+
+
