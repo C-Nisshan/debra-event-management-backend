@@ -61,7 +61,7 @@ public class TicketController : ControllerBase
                 {
                     EventID = ticketBatch.EventID,
                     TicketTypeID = ticketBatch.TicketTypeID,
-                    TicketBatchID = ticketBatchId, // Set the TicketBatchID
+                    TicketBatchID = ticketBatchId,
                     Price = ticketBatch.Price,
                     Status = "Available"
                 }).ToList();

@@ -1,14 +1,8 @@
 using DebraSheru.Data;
-using DebraSheru.Models; 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
 using System.Security.Claims;
 using System.Text;
 
@@ -20,8 +14,6 @@ builder.Services.AddDbContext<EventManagementContext>(options =>
 
 builder.Services.AddControllers();
 
-// Inject JwtService into the application services
-builder.Services.AddSingleton<JwtService>();
 
 // Configure JWT authentication
 var key = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"]);
