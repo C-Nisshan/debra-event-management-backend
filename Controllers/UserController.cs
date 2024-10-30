@@ -26,6 +26,7 @@ public class UserController : ControllerBase
 
     // POST: api/User/Register
     [HttpPost("Register")]
+    [Authorize(Roles = "Admin")]
     public async Task<ActionResult<User>> Register(User user)
     {
         if (user == null || string.IsNullOrEmpty(user.Email) || string.IsNullOrEmpty(user.Password))
@@ -41,7 +42,7 @@ public class UserController : ControllerBase
             return BadRequest("This user already exists.");
         }
 
-        // Hash password (you should implement password hashing here)
+        // Hash password
         user.Password = HashPassword(user.Password);
 
         _context.Users.Add(user);
