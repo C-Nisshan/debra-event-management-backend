@@ -19,6 +19,7 @@ public class TicketTypeController : ControllerBase
 
     // GET: api/TicketType
     [HttpGet("GetTicketType")]
+    [Authorize(Roles = "Admin")]
     public async Task<ActionResult<IEnumerable<TicketType>>> GetTicketTypes()
     {
         return await _context.TicketTypes.ToListAsync();
@@ -26,6 +27,7 @@ public class TicketTypeController : ControllerBase
 
     // GET: api/TicketType/{id}
     [HttpGet("GetTicketTypeBiId/{id}")]
+    [Authorize(Roles = "Admin")]
     public async Task<ActionResult<TicketType>> GetTicketType(int id)
     {
         var ticketType = await _context.TicketTypes.FindAsync(id);
